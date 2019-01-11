@@ -1,9 +1,10 @@
 from django.conf import settings
 from django.db import models
+import os
 
 
 def upload_image(instance, filename):
-	return "/updates/{0}/{1}".format(instance.user, filename)
+	return "updates/{0}/{1}".format(instance.user, filename)
 
 
 class Update(models.Model):

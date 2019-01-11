@@ -47,7 +47,3 @@ class SerializedDetail(View):
 		update_obj = Update.objects.get(pk=1)
 		data = serialize('json', [update_obj, ])  # this is how your turn a Django object to JSON.
 		return HttpResponse(data, content_type='application/json')
-
-
-
-
