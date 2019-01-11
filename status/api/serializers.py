@@ -10,3 +10,4 @@ class StatusSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Status
 		fields = ['user', 'content', 'image']
+		read_only_fields = ['user']

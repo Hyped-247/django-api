@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.db import models
-import os
 
 
 def upload_image(instance, filename):

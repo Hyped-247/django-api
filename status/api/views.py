@@ -1,27 +1,14 @@
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.mixins import CreateModelMixin, UpdateModelMixin, DestroyModelMixin
 from status.api.serializers import StatusSerializer
 from status.models import Status
 
 
-# class StatusSearchAPIView(APIView):
-# 	permission_classes = []
-# 	authentication_classes = []
-#
-# 	def get(self, request, format=None):
-# 		qs = Status.objects.all()
-# 		serializer = StatusSerializer(qs, many=True)
-# 		return Response(serializer.data)
-#
-# 	def post(self, request, format=None):
-# 		qs = Status.objects.all()
-# 		serializer = StatusSerializer(qs, many=True)
-# 		return Response(serializer.data)
-
-
-class ListModelStatusAPI(CreateModelMixin, ListAPIView):
-	permission_classes = []
-	authentication_classes = []
+class ListCreateModelStatusAPI(CreateModelMixin, ListAPIView):
+	permission_classes = [IsAuthenticatedOrReadOnly]
+	authentication_classes = [SessionAuthentication]
 	# queryset = Status.objects.all()
 	serializer_class = StatusSerializer
 	
@@ -36,16 +23,10 @@ class ListModelStatusAPI(CreateModelMixin, ListAPIView):
 	def post(self, request, *args, **kwargs):
 		return self.create(request, *args, **kwargs)
 	
-# class CreateModelStatusAPI(CreateAPIView):
-# 	permission_classes = []
-# 	authentication_classes = []
-# 	queryset = Status.objects.all()
-# 	serializer_class = StatusSerializer
-
 
 class DetailUpdateDeleteModelStatusAPI(UpdateModelMixin, DestroyModelMixin, RetrieveAPIView):
-	permission_classes = []
-	authentication_classes = []
+	permission_classes = [IsAuthenticatedOrReadOnly]
+	authentication_classes = [SessionAuthentication]
 	queryset = Status.objects.all()
 	serializer_class = StatusSerializer
 
