@@ -73,7 +73,7 @@ Pillow==4.2.1
 Pmw==2.0.1
 PPICounter==0.2.2
 prompt-toolkit==1.0.14
-psutil==5.4.2
+psutil==5.6.6
 psycopg2==2.7.5
 psycopg2-binary==2.7.6.1
 ptyprocess==0.5.2
