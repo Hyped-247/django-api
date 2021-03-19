@@ -30,7 +30,7 @@ django-filter==2.0.0
 django-sendgrid-webhook==0.3.0
 django-storages==1.7.1
 Django-Youtuber==0.1.1
-djangorestframework==3.9.0
+djangorestframework==3.11.2
 docopt==0.6.2
 docutils==0.14
 Faker==0.8.11
