@@ -85,7 +85,7 @@ pydotplus==2.0.2
 pyenchant==1.6.11
 pyfiglet==0.8.post0
 pygame==1.9.3
-Pygments==2.2.0
+Pygments==2.7.4
 PyInquirer==1.0.3
 PyInstaller==3.3
 pyobjc==4.0
