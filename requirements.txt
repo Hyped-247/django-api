@@ -59,7 +59,7 @@ macholib==1.8
 Markdown==3.0.1
 metakernel==0.20.14
 modulegraph==0.16
-numpy==1.13.3
+numpy==1.22.0
 oauth2client==4.1.2
 oauthlib==2.0.6
 olefile==0.44
